@@ -19,25 +19,32 @@
 }
 
 html {
-  background-color: #505869;
+  /* background-color: #505869; */
+  background-image: url("../public/images/sphere.jpg");
+  background-size: cover;
 }
 
 .fetch-btn {
-  background-color: rgb(67, 67, 245);
-  border: none;
-  border-radius: 9px;
-  font-size: 32px;
-  padding: 5px;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
+  font-size: 24px;
+  /* border: none; */
+  border-radius: 12px;
   margin-top: 30px;
   margin-bottom: 45px;
+  padding: 15px 30px 15px 30px;
+
+  border: 2px solid rgb(35 98 238);
+  color: white;
+  background-color: rgb(35 98 238);
+  box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0.4);
 }
 
 .fetch-btn:hover {
   cursor: pointer;
-  background-color: rgb(54, 54, 203);
+  background-color: rgb(31, 89, 213);
+  border: 2px solid rgb(31, 89, 213);
+  transition: 200ms ease-in-out;
+  /* box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0.4); */
+  box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0);
 }
 
 .button-container {

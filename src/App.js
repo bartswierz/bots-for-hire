@@ -18,16 +18,14 @@ const App = () => {
   // Run effect, will run once to fetch and populate our cards
   useEffect(() => {
     console.log("INSIDE useEffect");
-    fetch("https://random-data-api.com/api/users/random_user?size=10")
+    fetch("https://random-data-api.com/api/users/random_user?size=9")
       .then((response) => response.json())
       .then((userInfo) => setUsers(userInfo));
   }, []);
 
   // Fetch 10 New users to be rendered
   const handleClick = () => {
-    alert("inside handle click");
-    // console.log("inside handleclip in appjs");
-    fetch("https://random-data-api.com/api/users/random_user?size=10")
+    fetch("https://random-data-api.com/api/users/random_user?size=9")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   };
@@ -36,7 +34,7 @@ const App = () => {
     <div>
       <div className="button-container">
         <button className="fetch-btn" onClick={handleClick}>
-          Fetch Random
+          Build Bots
         </button>
       </div>
 
