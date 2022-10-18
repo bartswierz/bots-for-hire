@@ -1,0 +1,44 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+
+  row-gap: 20px;
+  column-gap: 20px;
+  width: 800px;
+  height: 1200px;
+  justify-items: center;
+  /* border: 2px solid red; */
+}
+
+.card-container {
+  width: 300px;
+  height: 300px;
+  background-color: whitesmoke;
+  border: 2px solid #777;
+}
+.card-name {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-job-title {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Needed to center our image in the center */
+.avatar-container {
+  display: grid;
+  place-items: center;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+}
