@@ -5,9 +5,32 @@ import Button from "./components/button/button.component";
 import List from "./components/list/list.component";
 import GreetForm from "./components/greet-form/greet-form.component";
 import Jokes from "./components/jokes/jokes.component";
+import { FetchButton } from "./components/fetch-button/fetch-button.component";
+
+const myArray = ["dog", "cat", "chicken", "cow", "sheep", "horse"];
+
+//when we click the fetch button, we want to make a Fetch() request to the API endpoint
 
 const App = () => {
-  return <div></div>;
+  //using array because we will store an ARRAY OF OBJECTS
+  const [users, setUsers] = useState([]);
+
+  const handleClick = () => {
+    // alert("inside handle click");
+    fetch("https://random-data-api.com/api/users/random_user?size=10")
+      .then((response) => response.json())
+      .then((users) => {
+        setUsers(users);
+        console.log("Users: ", users);
+      });
+    // .then((data) => console.log(data));
+  };
+
+  return (
+    <div>
+      <FetchButton text="Fetch Random" onClick={() => handleClick} />
+    </div>
+  );
 };
 
 export default App;
