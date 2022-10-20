@@ -14,23 +14,25 @@ export const Card = ({ users }) => {
             <p className="card-name">{`${first_name} ${last_name}`}</p>
             <p className="card-title">{employment.title}</p>
             <p className="card-description">
-              <strong>Key Skill: </strong>
-              {employment.key_skill}
+              <ion-icon name="briefcase"></ion-icon>
+              <span className="space">{employment.key_skill}</span>
             </p>
             <p className="card-description">
-              <strong>Email: </strong>
-              {email}
+              <ion-icon name="mail"></ion-icon>
+              <span className="space">{email}</span>
             </p>
             <p className="card-description">
-              <strong>Phone: </strong>
-              {phone_number}
+              <ion-icon name="call"></ion-icon>
+              <span className="space">{phone_number}</span>
             </p>
             <p className="card-description">
-              <strong>Location: </strong>
-              {address.city}, {address.state}
+              <ion-icon name="location-sharp"></ion-icon>
+              <span className="space">
+                {address.city}, {address.state}
+              </span>
             </p>
             <div className="card-btn-container">
-              <button className="card-btn">Let's Chat</button>
+              <button className="card-btn">You're Hired!</button>
             </div>
           </div>
         );

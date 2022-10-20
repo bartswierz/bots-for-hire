@@ -60,24 +60,10 @@ const App = () => {
   return (
     <div className="App">
       <div className="theme">
-        {/* <button onClick={() => changeTheme("red")}>Change Theme Blue</button>
-        <button onClick={() => changeTheme("blue")}>Change Theme Green</button>
-        <button onClick={() => changeTheme("green")}>Change Theme Red</button> */}
-        {/* <input type="submit" onChange={changeSize} /> */}
-        {/* <form onSubmit={changeSize}> */}
-
-        {/* <form>
-          <label> */}
-        {/* <input type="text" name="firstname" placeholder="First name" onChange={changeSize} /> */}
-        {/* <input type="text" name="firstname" placeholder="Input Size" onSubmit={changeSize} />
-            <button type="submit">Submit</button>
-          </label>
-        </form> */}
-
         {/* Passing setter to child */}
         <div className="button-container">
           <button className="fetch-btn" onClick={handleClick}>
-            Build Bots
+            Find Bots
           </button>
         </div>
         <SizeForm setUsers={setUsers} />

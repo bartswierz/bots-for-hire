@@ -9,11 +9,6 @@ export const SizeForm = (props) => {
   const handleSubmit = (event) => {
     // setSize(buildSize);
     event.preventDefault();
-    // handleSize(event.target.value);
-    // console.log("event: ", event);
-    // console.log("event.target.value: ", event.target.value[0]);
-    // alert(`Hello ${firstName} ${lastName}!`);
-    // setSize(event.target.value);
     fetch(`https://random-data-api.com/api/users/random_user?size=${size}`)
       .then((response) => response.json())
       .then((data) => props.setUsers(data));
@@ -21,11 +16,6 @@ export const SizeForm = (props) => {
     console.log("test", event.target.value);
   };
 
-  // const handleClick = () => {
-  //   fetch("https://random-data-api.com/api/users/random_user?size=9")
-  //     .then((response) => response.json())
-  //     .then((data) => setUsers(data));
-  // };
   const handleSize = (event) => {
     const newSize = event.target.value;
 
@@ -43,7 +33,7 @@ export const SizeForm = (props) => {
           <input type="text" name="bots" placeholder="Number of Bots" onChange={handleSize} />
         </label>
         <button type="submit" value="Submit" className="submit-btn">
-          Build Bots!
+          Display Bots!
         </button>
       </form>
     </div>
