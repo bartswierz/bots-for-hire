@@ -1,4 +1,4 @@
-import "./button.styles.css";
+import "./alert-button.styles.css";
 
 // // ALTERNATIVE 1 if we destructure name - Best because we destructered off name from props so instead of writing '{props.name}', we can write '{name}. This makes for MUCH MORE READABLE CODE WHEN WE SCALE
 const handleClick = (name) => {

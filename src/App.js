@@ -1,15 +1,16 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
-import Button from "./components/button/button.component";
+import sphere from "./images/sphere.jpg";
+import matrix from "./images/matrix.jpg";
+import warpspeed from "./images/warpspeed.jpg";
+
+import Button from "./components/buttons/alert-button/alert-button.component";
 import List from "./components/list/list.component";
 import GreetForm from "./components/greet-form/greet-form.component";
 import Jokes from "./components/jokes/jokes.component";
 import Cards from "./components/cards/cards.component";
-
-const myArray = ["dog", "cat", "chicken", "cow", "sheep", "horse"];
-
-//when we click the fetch button, we want to make a Fetch() request to the API endpoint
+import SizeForm from "./size-form/size-form.component";
 
 const App = () => {
   //Store user info from API
@@ -18,32 +19,106 @@ const App = () => {
   // Run effect, will run once to fetch and populate our cards
   useEffect(() => {
     console.log("INSIDE useEffect");
-    fetch("https://random-data-api.com/api/users/random_user?size=9")
+    fetch("https://random-data-api.com/api/users/random_user?size=8")
       .then((response) => response.json())
-      .then((userInfo) => setUsers(userInfo));
+      .then((userInfo) => {
+        setUsers(userInfo);
+        console.log("userInfo: ", userInfo);
+      });
   }, []);
 
   // Fetch 10 New users to be rendered
   const handleClick = () => {
-    fetch("https://random-data-api.com/api/users/random_user?size=9")
+    fetch("https://random-data-api.com/api/users/random_user?size=8")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   };
 
-  return (
-    <div>
-      <div className="button-container">
-        <button className="fetch-btn" onClick={handleClick}>
-          Build Bots
-        </button>
-      </div>
+  // const changeTheme = (color) => {
+  //   switch (color) {
+  //     case "red":
+  //       return (document.body.style.backgroundColor = "blue");
+  //     case "blue":
+  //       return (document.body.style.backgroundColor = "green");
+  //     case "green":
+  //       return (document.body.style.backgroundColor = "red");
+  //     default:
+  //       alert("error color:", document.body.style.backgroundColor);
+  //   }
+  //   // document.body.style.backgroundColor;
+  // };
 
-      <Cards users={users} />
+  // const changeSize = (event) => {
+  //   event.preventDefault();
+  //   if (event.target.value > 100) event.target.value = 100;
+  //   console.log("value: ", event.target.value);
+  //   fetch(`https://random-data-api.com/api/users/random_user?size=${event.target.value}`)
+  //     .then((response) => response.json())
+  //     .then((userInfo) => setUsers(userInfo));
+  // };
+
+  // <label>
+  //   <input type="text" name="firstname" placeholder="First name" onChange={onFirstChange} value={firstName} />
+  // </label>;
+
+  return (
+    <div className="App">
+      <div className="theme">
+        {/* <button onClick={() => changeTheme("red")}>Change Theme Blue</button>
+        <button onClick={() => changeTheme("blue")}>Change Theme Green</button>
+        <button onClick={() => changeTheme("green")}>Change Theme Red</button> */}
+        {/* <input type="submit" onChange={changeSize} /> */}
+        {/* <form onSubmit={changeSize}> */}
+
+        {/* <form>
+          <label> */}
+        {/* <input type="text" name="firstname" placeholder="First name" onChange={changeSize} /> */}
+        {/* <input type="text" name="firstname" placeholder="Input Size" onSubmit={changeSize} />
+            <button type="submit">Submit</button>
+          </label>
+        </form> */}
+
+        {/* Passing setter to child */}
+        <div className="button-container">
+          <button className="fetch-btn" onClick={handleClick}>
+            Build Bots
+          </button>
+          <SizeForm setUsers={setUsers} />
+        </div>
+        <Cards users={users} />
+      </div>
     </div>
   );
 };
 
 export default App;
+
+/*
+ {/* <div style={background: url("../public/images/sphere.jpg")}></div> */
+{
+  /* <div style={{ backgroundImage: `url("../public/images/sphere.jpg")` }}> */
+}
+{
+  /* <div style={{ backgroundImage: `url(${theme})` }} onClick={onClickHandler}> */
+}
+
+{
+  /* <div className="theme" style={{ backgroundImage: `url(${theme})` }} onClick={onClickHandler}> */
+}
+
+// return (
+//   <div>
+//     <div className="theme" onClick={handleTheme}>
+//       <div className="button-container">
+//         <button className="fetch-btn" onClick={handleClick}>
+//           Build Bots
+//         </button>
+//       </div>
+
+//       <Cards users={users} />
+//     </div>
+//   </div>
+// );
 
 // EXCERCISE #1
 // const App = () => {

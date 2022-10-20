@@ -1,0 +1,25 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10vh auto;
+  width: 270px;
+}
+
+.size-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  column-gap: 50px;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.submit-btn {
+  background-color: #b33b26;
+  border: none;
+  border-radius: 9px;
+  font-size: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}

@@ -5,14 +5,33 @@ export const Card = ({ users }) => {
   return (
     // users.map((user) => {
     <div className="cards-container">
-      {users.map(({ id, avatar, first_name, last_name, employment }) => {
+      {users.map(({ id, avatar, first_name, last_name, employment, email, phone_number, address }) => {
         return (
           <div className="card-container" key={id}>
             <div className="avatar-container">
               <img className="avatar" src={avatar} alt="Robot"></img>
             </div>
             <p className="card-name">{`${first_name} ${last_name}`}</p>
-            <p className="card-job-title">{employment.title}</p>
+            <p className="card-description">
+              <strong>Job Title: </strong>
+              {employment.title}
+            </p>
+            <p className="card-description">
+              <strong>Key Skill: </strong>
+              {employment.key_skill}
+            </p>
+            <p className="card-description">
+              <strong>Email: </strong>
+              {email}
+            </p>
+            <p className="card-description">
+              <strong>Phone: </strong>
+              {phone_number}
+            </p>
+            <p className="card-description">
+              <strong>Location: </strong>
+              {address.city}, {address.state}, {address.zip_code}
+            </p>
           </div>
         );
       })}
