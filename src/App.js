@@ -5,10 +5,6 @@ import sphere from "./images/sphere.jpg";
 import matrix from "./images/matrix.jpg";
 import warpspeed from "./images/warpspeed.jpg";
 
-import Button from "./components/buttons/alert-button/alert-button.component";
-import List from "./components/list/list.component";
-import GreetForm from "./components/greet-form/greet-form.component";
-import Jokes from "./components/jokes/jokes.component";
 import Cards from "./components/cards/cards.component";
 import SizeForm from "./size-form/size-form.component";
 
@@ -19,7 +15,7 @@ const App = () => {
   // Run effect, will run once to fetch and populate our cards
   useEffect(() => {
     console.log("INSIDE useEffect");
-    fetch("https://random-data-api.com/api/users/random_user?size=8")
+    fetch("https://random-data-api.com/api/users/random_user?size=4")
       .then((response) => response.json())
       .then((userInfo) => {
         setUsers(userInfo);
@@ -29,7 +25,7 @@ const App = () => {
 
   // Fetch 10 New users to be rendered
   const handleClick = () => {
-    fetch("https://random-data-api.com/api/users/random_user?size=8")
+    fetch("https://random-data-api.com/api/users/random_user?size=4")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   };
@@ -83,8 +79,8 @@ const App = () => {
           <button className="fetch-btn" onClick={handleClick}>
             Build Bots
           </button>
-          <SizeForm setUsers={setUsers} />
         </div>
+        <SizeForm setUsers={setUsers} />
         <Cards users={users} />
       </div>
     </div>

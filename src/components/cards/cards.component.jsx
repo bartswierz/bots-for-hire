@@ -8,14 +8,11 @@ export const Card = ({ users }) => {
       {users.map(({ id, avatar, first_name, last_name, employment, email, phone_number, address }) => {
         return (
           <div className="card-container" key={id}>
-            <div className="avatar-container">
+            <div className="banner">
               <img className="avatar" src={avatar} alt="Robot"></img>
             </div>
             <p className="card-name">{`${first_name} ${last_name}`}</p>
-            <p className="card-description">
-              <strong>Job Title: </strong>
-              {employment.title}
-            </p>
+            <p className="card-title">{employment.title}</p>
             <p className="card-description">
               <strong>Key Skill: </strong>
               {employment.key_skill}
@@ -30,8 +27,11 @@ export const Card = ({ users }) => {
             </p>
             <p className="card-description">
               <strong>Location: </strong>
-              {address.city}, {address.state}, {address.zip_code}
+              {address.city}, {address.state}
             </p>
+            <div className="card-btn-container">
+              <button className="card-btn">Let's Chat</button>
+            </div>
           </div>
         );
       })}

@@ -30,7 +30,7 @@ export const SizeForm = (props) => {
     const newSize = event.target.value;
 
     // Input between 1-8 else set to 30
-    newSize <= 8 && newSize > 1 ? setSize(newSize) : setSize(8);
+    newSize <= 4 && newSize >= 1 ? setSize(newSize) : setSize(4);
   };
 
   return (

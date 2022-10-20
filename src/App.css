@@ -6,6 +6,7 @@
   /* background-image: url("./images/matrix.jpg"); */
   /* background-image: url("./images/warpspeed.jpg"); */
   background-size: cover;
+  background-attachment: fixed;
 }
 
 body {
