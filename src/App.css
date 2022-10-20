@@ -9,6 +9,14 @@
   background-attachment: fixed;
 }
 
+.company-header {
+  font-size: 64px;
+  font-family: "Audiowide", cursive;
+  /* font-family: "Baumans", cursive; */
+  text-align: center;
+  color: rgb(35 98 238);
+}
+
 body {
   /* background-color: red; */
 }
@@ -40,6 +48,8 @@ body {
 /* }  */
 
 .fetch-btn {
+  font-family: "Audiowide", cursive;
+  /* font-weight: bold; */
   font-size: 24px;
   /* border: none; */
   border-radius: 12px;

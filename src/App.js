@@ -60,6 +60,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="theme">
+        <header className="company-header">Bots-For-Hire</header>
         {/* Passing setter to child */}
         <div className="button-container">
           <button className="fetch-btn" onClick={handleClick}>
