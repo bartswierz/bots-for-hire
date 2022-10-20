@@ -30,10 +30,10 @@ export const SizeForm = (props) => {
           {/* First Name: */}
           {/* <input type="text" name="bots" placeholder="Number of Bots" onChange={buildSize} value={number} /> */}
           {/* <input type="text" name="bots" placeholder="Number of Bots" onChange={handleSize} /> */}
-          <input type="text" name="bots" placeholder="Number of Bots" onChange={handleSize} />
+          <input type="text" name="bots" placeholder="Number of Bots (Max: 4)" onChange={handleSize} className="display-input" />
         </label>
         <button type="submit" value="Submit" className="submit-btn">
-          Display Bots!
+          Limit Bots Displayed
         </button>
       </form>
     </div>

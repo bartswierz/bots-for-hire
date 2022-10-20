@@ -16,11 +16,21 @@
 }
 
 .submit-btn {
-  background-color: #b33b26;
-  border: none;
+  font-family: "Audiowide", cursive;
   border-radius: 9px;
   font-size: 16px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+  background-color: rgb(35 98 238);
+  color: #f2f2f2;
+  transition: 200ms ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: rgb(32, 92, 222);
+  cursor: pointer;
+}
+
+input.display-input {
+  padding: 8px;
+  font-size: 16px;
 }
