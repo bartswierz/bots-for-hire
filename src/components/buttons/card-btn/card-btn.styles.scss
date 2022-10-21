@@ -2,22 +2,6 @@ $primaryBtn: #ffd01a;
 $hoverColor: #efb10a;
 $activeColor: #e8a200;
 
-/*
-header {
-}
-
-button {
-}
-
-EQUALS - We can NEST them to read clearer
-header {
-  ...
-  button {
-  ...
-  }
-}
-*/
-
 .card-btn-container {
   display: flex;
   justify-content: center;

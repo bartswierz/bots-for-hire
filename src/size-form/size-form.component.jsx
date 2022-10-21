@@ -1,4 +1,4 @@
-import "./size-form.styles.css";
+import "./size-form.styles.scss";
 import { useState } from "react";
 
 export const SizeForm = (props) => {
