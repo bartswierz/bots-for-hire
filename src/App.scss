@@ -1,7 +1,6 @@
 .theme {
   width: 100vw;
   height: 100vh;
-  /* background-image: url("../public/matrix.jpg"); */
   background-image: url("./images/sphere.jpg");
   /* background-image: url("./images/matrix.jpg"); */
   /* background-image: url("./images/warpspeed.jpg"); */
@@ -17,9 +16,6 @@
   color: rgb(35 98 238);
 }
 
-body {
-  /* background-color: red; */
-}
 .app-container {
   margin: 0 auto;
   width: 20rem;
@@ -40,13 +36,6 @@ body {
   align-items: center;
 }
 
-/* html {
-  background-image: url("../public/images/sphere.jpg");
-  /* background-image: url("../public/images/matrix.jpg"); */
-/* background-image: url("../public/images/warpspeed.jpg"); */
-/* background-size: cover; */
-/* }  */
-
 .fetch-btn {
   font-family: "Audiowide", cursive;
   /* font-weight: bold; */
@@ -61,15 +50,14 @@ body {
   color: white;
   background-color: rgb(35 98 238);
   box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0.4);
-}
 
-.fetch-btn:hover {
-  cursor: pointer;
-  background-color: rgb(31, 89, 213);
-  border: 2px solid rgb(31, 89, 213);
-  transition: 200ms ease-in-out;
-  /* box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0.4); */
-  box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0);
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(31, 89, 213);
+    border: 2px solid rgb(31, 89, 213);
+    transition: 200ms ease-in-out;
+    box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0);
+  }
 }
 
 .button-container {

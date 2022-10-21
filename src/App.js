@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { useState, useEffect, useContext } from "react";
 
 import sphere from "./images/sphere.jpg";
