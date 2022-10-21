@@ -1,0 +1,46 @@
+$primaryBtn: #ffd01a;
+$hoverColor: #efb10a;
+$activeColor: #e8a200;
+
+/*
+header {
+}
+
+button {
+}
+
+EQUALS - We can NEST them to read clearer
+header {
+  ...
+  button {
+  ...
+  }
+}
+*/
+
+.card-btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 40px 0px;
+
+  .card-btn {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px;
+    width: 300px;
+    border-radius: 50px;
+    border: none;
+    background-color: $primaryBtn;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+      background-color: $hoverColor;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      background-color: $activeColor;
+      transform: scale(1);
+    }
+  }
+}

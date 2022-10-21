@@ -30,33 +30,6 @@ const App = () => {
       .then((data) => setUsers(data));
   };
 
-  // const changeTheme = (color) => {
-  //   switch (color) {
-  //     case "red":
-  //       return (document.body.style.backgroundColor = "blue");
-  //     case "blue":
-  //       return (document.body.style.backgroundColor = "green");
-  //     case "green":
-  //       return (document.body.style.backgroundColor = "red");
-  //     default:
-  //       alert("error color:", document.body.style.backgroundColor);
-  //   }
-  //   // document.body.style.backgroundColor;
-  // };
-
-  // const changeSize = (event) => {
-  //   event.preventDefault();
-  //   if (event.target.value > 100) event.target.value = 100;
-  //   console.log("value: ", event.target.value);
-  //   fetch(`https://random-data-api.com/api/users/random_user?size=${event.target.value}`)
-  //     .then((response) => response.json())
-  //     .then((userInfo) => setUsers(userInfo));
-  // };
-
-  // <label>
-  //   <input type="text" name="firstname" placeholder="First name" onChange={onFirstChange} value={firstName} />
-  // </label>;
-
   return (
     <div className="App">
       <div className="theme">

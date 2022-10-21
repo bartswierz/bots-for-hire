@@ -1,4 +1,5 @@
 import "./cards.styles.css";
+import CardBtn from "../buttons/card-btn/card-btn.component";
 
 //pass in JSON OBJECT for users to map through, this has to be given from our button click
 export const Card = ({ users }) => {
@@ -31,9 +32,7 @@ export const Card = ({ users }) => {
                 {address.city}, {address.state}
               </span>
             </p>
-            <div className="card-btn-container">
-              <button className="card-btn">You're Hired!</button>
-            </div>
+            <CardBtn />
           </div>
         );
       })}

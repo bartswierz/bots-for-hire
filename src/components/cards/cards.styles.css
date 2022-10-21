@@ -96,31 +96,3 @@ ion-icon {
   transition: 300ms ease-in-out;
   transform: translateY(50%) scale(1.1);
 }
-
-.card-btn-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0px 40px 0px;
-}
-
-.card-btn {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 12px;
-  width: 300px;
-  border-radius: 50px;
-  border: none;
-  background-color: #ffd01a;
-  transition: 200ms ease-in-out;
-}
-
-.card-btn:hover {
-  background-color: #efb10a;
-  transform: scale(1.1);
-}
-
-/* Decrease to default & Darken ON CLICK */
-.card-btn:active {
-  background-color: #e8a200;
-  transform: scale(1);
-}

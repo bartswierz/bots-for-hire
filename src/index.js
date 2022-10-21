@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./contexts/theme.context";
-import Theme from "./components/buttons/theme/theme-button.component";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
