@@ -2,8 +2,8 @@ import "./App.scss";
 import { useState, useEffect, useContext } from "react";
 
 import sphere from "./images/sphere.jpg";
-import matrix from "./images/matrix.jpg";
-import warpspeed from "./images/warpspeed.jpg";
+import matrix from "./images/matrix-small.jpg";
+import warpspeed from "./images/warpspeed-small.jpg";
 
 import Cards from "./components/cards/cards.component";
 import SizeForm from "./size-form/size-form.component";
@@ -15,7 +15,7 @@ const App = () => {
   // Run effect, will run once to fetch and populate our cards
   useEffect(() => {
     console.log("INSIDE useEffect");
-    fetch("https://random-data-api.com/api/users/random_user?size=4")
+    fetch("https://random-data-api.com/api/users/random_user?size=9")
       .then((response) => response.json())
       .then((userInfo) => {
         setUsers(userInfo);
@@ -25,7 +25,7 @@ const App = () => {
 
   // Fetch 10 New users to be rendered
   const handleClick = () => {
-    fetch("https://random-data-api.com/api/users/random_user?size=4")
+    fetch("https://random-data-api.com/api/users/random_user?size=9")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   };

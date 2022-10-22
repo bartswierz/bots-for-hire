@@ -1,11 +1,21 @@
+// .theme {
+//   width: 100vw;
+//   height: 100vh;
+//   background-image: url("./images/sphere.jpg");
+//   /* background-image: url("./images/matrix.jpg"); */
+//   /* background-image: url("./images/warpspeed.jpg"); */
+//   background-size: cover;
+//   background-attachment: fixed;
+// }
+
 .theme {
-  width: 100vw;
-  height: 100vh;
   background-image: url("./images/sphere.jpg");
   /* background-image: url("./images/matrix.jpg"); */
   /* background-image: url("./images/warpspeed.jpg"); */
-  background-size: cover;
+  background-size: 100%;
+  background-position: center;
   background-attachment: fixed;
+  padding-bottom: 7vh;
 }
 
 .company-header {
@@ -39,11 +49,11 @@
 .fetch-btn {
   font-family: "Audiowide", cursive;
   /* font-weight: bold; */
-  font-size: 24px;
+  font-size: 16px;
   /* border: none; */
   border-radius: 12px;
-  margin-top: 30px;
-  margin-bottom: 45px;
+  margin-top: 20px;
+  margin-bottom: 15px;
   padding: 15px 30px 15px 30px;
 
   border: 2px solid rgb(35 98 238);

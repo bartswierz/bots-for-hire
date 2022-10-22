@@ -12,27 +12,29 @@ export const Card = ({ users }) => {
             <div className="banner">
               <img className="avatar" src={avatar} alt="Robot"></img>
             </div>
-            <p className="card-name">{`${first_name} ${last_name}`}</p>
-            <p className="card-title">{employment.title}</p>
-            <p className="card-description">
-              <ion-icon name="briefcase"></ion-icon>
-              <span className="space">{employment.key_skill}</span>
-            </p>
-            <p className="card-description">
-              <ion-icon name="mail"></ion-icon>
-              <span className="space">{email}</span>
-            </p>
-            <p className="card-description">
-              <ion-icon name="call"></ion-icon>
-              <span className="space">{phone_number}</span>
-            </p>
-            <p className="card-description">
-              <ion-icon name="location-sharp"></ion-icon>
-              <span className="space">
-                {address.city}, {address.state}
-              </span>
-            </p>
-            <CardBtn />
+            <div className="text-container">
+              <p className="card-name">{`${first_name} ${last_name}`}</p>
+              <p className="card-title">{employment.title}</p>
+              <p className="card-description">
+                <ion-icon name="briefcase"></ion-icon>
+                <span className="space">{employment.key_skill}</span>
+              </p>
+              <p className="card-description">
+                <ion-icon name="mail"></ion-icon>
+                <span className="space">{email}</span>
+              </p>
+              <p className="card-description">
+                <ion-icon name="call"></ion-icon>
+                <span className="space">{phone_number}</span>
+              </p>
+              <p className="card-description">
+                <ion-icon name="location-sharp"></ion-icon>
+                <span className="space">
+                  {address.city}, {address.state}
+                </span>
+              </p>
+              <CardBtn />
+            </div>
           </div>
         );
       })}

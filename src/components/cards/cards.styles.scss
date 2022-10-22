@@ -10,24 +10,34 @@ body {
 .cards-container {
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0 17vw;
+  grid-template-columns: repeat(3, 1fr);
+  // margin: 0 15vw;
+  margin: 0 auto;
   /* margin: 0 25vw; */
 
   row-gap: 40px;
   column-gap: 40px;
-  width: 1000px;
+  max-width: 1000px;
   min-height: 800px;
   justify-items: center;
   /* border: 2px solid red; */
 
   .card-container {
-    min-width: 420px;
-    max-height: 600px;
+    // min-width: 420px;
+    min-width: 310px;
+    // max-width: 450px;
+    max-height: 578px;
     /* background-color: #deb493; */
     background-color: #f2f2f2;
     border-radius: 9px;
     box-shadow: 10px 10px 15px 5px rgb(0, 0, 0, 0.4);
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0px;
+      // height: 500px;
+    }
 
     /* Needed to center our image in the center */
     .banner {
@@ -37,8 +47,8 @@ body {
       border-radius: 9px;
       border-bottom-right-radius: 0px;
       border-bottom-left-radius: 0px;
-      /* background-image: url("../../images/warpspeed.jpg"); */
-      background-image: url("../../images/matrix.jpg");
+      /* background-image: url("../../images/warpspeed-small.jpg"); */
+      background-image: url("../../images/matrix-small.jpg");
       background-size: cover;
 
       .avatar {
@@ -49,10 +59,10 @@ body {
         justify-content: center;
         align-content: center;
         border-radius: 50%;
-        /* background-image: url("../../images/matrix.jpg"); */
-        background-image: url("../../images/warpspeed.jpg");
+        /* background-image: url("../../images/matrix-small.jpg"); */
+        background-image: url("../../images/warpspeed-small.jpg");
         background-size: cover;
-
+        // object-fit: cover;
         /* Moves User image between Banner and Text */
         transform: translateY(50%);
         border: 5px solid #f2f2f2;
@@ -81,8 +91,12 @@ body {
     }
 
     .card-description {
-      padding-left: 14%;
+      // padding-left: 14%;
+      padding-left: 8%;
       font-family: "Montserrat", sans-serif;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      font-size: 14px;
 
       /* Aligns Icon with Description Text */
       ion-icon {

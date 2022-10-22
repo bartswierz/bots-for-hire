@@ -20,7 +20,7 @@ export const SizeForm = (props) => {
     const newSize = event.target.value;
 
     // Input between 1-8 else set to 30
-    newSize <= 4 && newSize >= 1 ? setSize(newSize) : setSize(4);
+    newSize <= 9 && newSize >= 1 ? setSize(newSize) : setSize(9);
   };
 
   return (
@@ -30,7 +30,7 @@ export const SizeForm = (props) => {
           {/* First Name: */}
           {/* <input type="text" name="bots" placeholder="Number of Bots" onChange={buildSize} value={number} /> */}
           {/* <input type="text" name="bots" placeholder="Number of Bots" onChange={handleSize} /> */}
-          <input type="text" name="bots" placeholder="Number of Bots (Max: 4)" onChange={handleSize} className="display-input" />
+          <input type="text" name="bots" placeholder="Number of Bots (Max: 6)" onChange={handleSize} className="display-input" />
         </label>
         <button type="submit" value="Submit" className="submit-btn">
           Limit Bots Displayed
