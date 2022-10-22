@@ -7,6 +7,7 @@ import warpspeed from "./images/warpspeed-small.jpg";
 
 import Cards from "./components/cards/cards.component";
 import SizeForm from "./size-form/size-form.component";
+// import CardIcon from "./components/card-icon/card-icon.component";
 
 const App = () => {
   //Store user info from API

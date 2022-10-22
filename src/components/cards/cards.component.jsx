@@ -1,6 +1,6 @@
 import "./cards.styles.scss";
 import CardBtn from "../buttons/card-btn/card-btn.component";
-
+import CardIcon from "../card-icon/card-icon.component";
 //test
 //pass in JSON OBJECT for users to map through, this has to be given from our button click
 export const Card = ({ users }) => {
@@ -14,6 +14,8 @@ export const Card = ({ users }) => {
               <img className="avatar" src={avatar} alt="Robot"></img>
             </div>
             <div className="text-container">
+              {/* <CardIcon onClick={handleClick} /> */}
+              <CardIcon />
               <p className="card-name">{`${first_name} ${last_name}`}</p>
               <p className="card-title">{employment.title}</p>
               <p className="card-description">

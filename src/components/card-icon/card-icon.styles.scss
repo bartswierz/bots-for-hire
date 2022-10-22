@@ -1,0 +1,17 @@
+.icon-container {
+  display: flex;
+  justify-content: end;
+  margin-right: 2%;
+  margin-top: 2%;
+  // width: 50px;
+  cursor: pointer;
+  .card-icon {
+    width: 30px;
+    height: 30px;
+    // cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
