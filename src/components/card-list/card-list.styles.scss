@@ -1,0 +1,23 @@
+/* 
+font-family: 'Oswald', sans-serif; 
+font-family: 'Montserrat', sans-serif;
+*/
+
+body {
+  color: #404040;
+}
+
+.cards-container {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+  // margin: 0 15vw;
+  margin: 0 auto;
+  /* margin: 0 25vw; */
+
+  row-gap: 40px;
+  column-gap: 40px;
+  max-width: 1000px;
+  min-height: 800px;
+  justify-items: center;
+}

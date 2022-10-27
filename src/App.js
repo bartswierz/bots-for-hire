@@ -5,7 +5,7 @@ import sphere from "./images/sphere.jpg";
 import matrix from "./images/matrix-small.jpg";
 import warpspeed from "./images/warpspeed-small.jpg";
 
-import Cards from "./components/cards/cards.component";
+import CardList from "./components/card-list/card-list.component";
 import SizeForm from "./size-form/size-form.component";
 // import CardIcon from "./components/card-icon/card-icon.component";
 
@@ -42,7 +42,7 @@ const App = () => {
           </button>
         </div>
         <SizeForm setUsers={setUsers} />
-        <Cards users={users} />
+        <CardList users={users} />
       </div>
     </div>
   );
