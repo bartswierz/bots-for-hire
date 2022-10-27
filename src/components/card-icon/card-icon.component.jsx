@@ -11,18 +11,14 @@ export const CardIcon = () => {
   };
 
   return (
-    <div className="icon-container card-icon" onClick={handleClick}>
-      {isSaveClicked ? <ion-icon name="bookmark" size="large"></ion-icon> : <ion-icon name="bookmark-outline" size="large"></ion-icon>}
+    <div className="card-icon" onClick={handleClick}>
+      {isSaveClicked ? (
+        <ion-icon name="bookmark" size="large" color="red"></ion-icon>
+      ) : (
+        <ion-icon name="bookmark-outline" size="large"></ion-icon>
+      )}
     </div>
   );
 };
 
 export default CardIcon;
-
-//<div className="icon-container">
-{
-  /* <button className="card-icon">
-<ion-icon name="bookmark-outline"></ion-icon>
-</button>
-</div> */
-}

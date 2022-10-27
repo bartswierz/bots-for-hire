@@ -14,7 +14,6 @@ export const Card = ({ users }) => {
               <img className="avatar" src={avatar} alt="Robot"></img>
             </div>
             <div className="text-container">
-              {/* <CardIcon onClick={handleClick} /> */}
               <CardIcon />
               <p className="card-name">{`${first_name} ${last_name}`}</p>
               <p className="card-title">{employment.title}</p>
