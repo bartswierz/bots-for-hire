@@ -24,6 +24,16 @@
   /* font-family: "Baumans", cursive; */
   text-align: center;
   color: rgb(35 98 238);
+  background-color: #2a2a2a;
+  // width: 40%;
+  margin: 0 auto;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  // Gives our header a 4-color linear gradient
+  background: linear-gradient(to right, rgb(44, 54, 241) 15%, rgb(109, 41, 244) 48%, rgb(205, 67, 67) 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .app-container {
