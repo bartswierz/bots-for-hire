@@ -10,8 +10,12 @@ export const CardIcon = () => {
     setIsSaveClicked(saveClick);
   };
 
+  const handleUser = () => {
+    console.log("inside handleUser");
+  };
+
   return (
-    <div className="card-icon" onClick={handleClick}>
+    <div className="card-icon" onClick={handleClick} user={handleUser}>
       {isSaveClicked ? <ion-icon name="bookmark" size="large"></ion-icon> : <ion-icon name="bookmark-outline" size="large"></ion-icon>}
     </div>
   );

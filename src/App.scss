@@ -8,14 +8,30 @@
 //   background-attachment: fixed;
 // }
 
-.theme {
+.app {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+
   background-image: url("./images/sphere.jpg");
-  /* background-image: url("./images/matrix.jpg"); */
-  /* background-image: url("./images/warpspeed.jpg"); */
   background-size: 100%;
   background-position: center;
   background-attachment: fixed;
+  // width: 20% sidebar, 80% content
+  // background-color: #404040;
+}
+
+.theme {
+  // background-image: url("./images/sphere.jpg");
+  /* background-image: url("./images/matrix.jpg"); */
+  /* background-image: url("./images/warpspeed.jpg"); */
+  // background-size: 100%;
+  // background-position: center;
+  // background-attachment: fixed;
   padding-bottom: 7vh;
+
+  // PUSH theme to the right, px == sidebar width
+  // margin-left: 30%;
+  margin-left: 30vw;
 }
 
 .company-header {

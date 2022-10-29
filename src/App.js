@@ -7,10 +7,11 @@ import warpspeed from "./images/warpspeed-small.jpg";
 
 import CardList from "./components/card-list/card-list.component";
 import SizeForm from "./size-form/size-form.component";
+import Sidebar from "./components/sidebar/sidebar.component";
 // import CardIcon from "./components/card-icon/card-icon.component";
 
 const App = () => {
-  //Store user info from API
+  //Store user info from API - Moved to Sidebar
   const [users, setUsers] = useState([]);
 
   // Run effect, will run once to fetch and populate our cards
@@ -24,24 +25,31 @@ const App = () => {
       });
   }, []);
 
-  // Fetch 10 New users to be rendered
-  const handleClick = () => {
-    fetch("https://random-data-api.com/api/users/random_user?size=9")
-      .then((response) => response.json())
-      .then((data) => setUsers(data));
-  };
+  // Fetch 10 New users to be rendered - Moved to SideBar Component
+  // const handleClick = () => {
+  //   fetch("https://random-data-api.com/api/users/random_user?size=9")
+  //     .then((response) => response.json())
+  //     .then((data) => setUsers(data));
+  // };
 
   return (
-    <div className="App">
+    // <div className="App">
+    <div className="app">
+      <Sidebar user={users} setUsers={setUsers} />
       <div className="theme">
-        <header className="company-header">Bots-For-Hire</header>
+        {/* Display sidebar - left side */}
+
+        <div>
+          <header className="company-header">Bots-For-Hire</header>
+          <div className="saved-dropdown"></div>
+        </div>
         {/* Passing setter to child */}
-        <div className="button-container">
+        {/* <div className="button-container">
           <button className="fetch-btn" onClick={handleClick}>
             Find Bots
           </button>
-        </div>
-        <SizeForm setUsers={setUsers} />
+        </div> */}
+        {/* <SizeForm setUsers={setUsers} /> */}
         <CardList users={users} />
       </div>
     </div>

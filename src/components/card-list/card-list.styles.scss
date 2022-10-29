@@ -9,11 +9,8 @@ body {
 
 .cards-container {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns: repeat(3, 1fr);
-  // margin: 0 15vw;
   margin: 0 auto;
-  /* margin: 0 25vw; */
 
   row-gap: 40px;
   column-gap: 40px;
