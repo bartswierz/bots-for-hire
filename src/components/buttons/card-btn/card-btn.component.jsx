@@ -2,13 +2,34 @@ import { useState } from "react";
 
 import "./card-btn.styles.scss";
 
-export const CardBtn = () => {
+// export const CardBtn = () => {
+export const CardBtn = ({ user }) => {
   const [isClicked, setIsClicked] = useState(false);
+
+  // console.log("user: ", user);
+
+  const [isHired, setIsHired] = useState([]);
+  // Add Bot into our list of hired bots
+  // const addToHiredList = () => {
+  //   console.log("Bot Hired!");
+  // };
 
   //Switch isClicked state to change button text on click
   const handleClick = () => {
+    console.log("card-btn: BUTTON CLICKED!");
+    console.log("Before: IsHired: ", isHired);
+    const newVal = [...isHired, user];
+    setIsHired(newVal);
+    console.log("After: IsHired: ", isHired);
+
+    // switches button text
     const click = !isClicked;
     setIsClicked(click);
+
+    // console.log("Before: IsHired: ", isHired);
+    // const newVal = [...isHired, user];
+    // setIsHired(newVal);
+    // console.log("After: IsHired: ", isHired);
   };
 
   return (

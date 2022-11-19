@@ -1,10 +1,17 @@
 import "./card.styles.scss";
 import CardBtn from "../buttons/card-btn/card-btn.component";
 import CardIcon from "../card-icon/card-icon.component";
-
+import { useState } from "react";
 export const Card = ({ user }) => {
+  // const [isHired, setIsHired] = useState([]);
   // console.log("in card: ", user.id);
   const { id, avatar, first_name, last_name, employment, email, phone_number, address } = user;
+
+  // const [isHired, setIsHired] = useState([]);
+  // Add Bot into our list of hired bots
+  // const addToHiredList = () => {
+  //   console.log("Bot Hired!");
+  // };
 
   return (
     <div className="card-container" key={id}>
@@ -33,7 +40,9 @@ export const Card = ({ user }) => {
             {address.city}, {address.state}
           </span>
         </p>
-        <CardBtn />
+        {/* On click, we want to grab the details of this employee */}
+        <CardBtn user={user} />
+        {/* <CardBtn /> */}
       </div>
     </div>
   );

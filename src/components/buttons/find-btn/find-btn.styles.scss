@@ -1,0 +1,23 @@
+.fetch-btn {
+  font-family: "Audiowide", cursive;
+  /* font-weight: bold; */
+  font-size: 16px;
+  /* border: none; */
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 15px 30px 15px 30px;
+
+  border: 2px solid rgb(35 98 238);
+  color: white;
+  background-color: rgb(35 98 238);
+  box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0.4);
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(31, 89, 213);
+    border: 2px solid rgb(31, 89, 213);
+    transition: 200ms ease-in-out;
+    box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0);
+  }
+}

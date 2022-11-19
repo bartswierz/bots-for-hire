@@ -1,24 +1,18 @@
 import SizeForm from "../../size-form/size-form.component";
+import FindBtn from "../buttons/find-btn/find-btn.component";
+import HiredList from "../hired-list/hired-list.component";
 import "./sidebar.styles.scss";
-// Displays our search, limit displayed inside here
+
 export const Sidebar = ({ users, setUsers }) => {
-  //Store user info from API - Moved to Sidebar
-  // const [users, setUsers] = useState([]);
-
-  const handleClick = () => {
-    fetch("https://random-data-api.com/api/users/random_user?size=9")
-      .then((response) => response.json())
-      .then((data) => setUsers(data));
-  };
-
   return (
     <div className="sidebar-container">
-      <div className="button-container">
-        <button className="fetch-btn" onClick={handleClick}>
-          Find Bots
-        </button>
-      </div>
-      <SizeForm users={users} />
+      <FindBtn setUsers={setUsers} />
+
+      {/* <SizeForm users={users} /> */}
+      {/* <SizeForm setUsers={setUsers} /> */}
+
+      {/* Display Container here with Avatar, Name, Title  */}
+      <HiredList users={users} />
     </div>
   );
 };

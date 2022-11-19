@@ -2,7 +2,8 @@ import "./size-form.styles.scss";
 import { useState } from "react";
 
 export const SizeForm = (props) => {
-  // console.log("props: ", props);
+  // export const SizeForm = () => {
+  // console.log("in size form props: ", props);
   const [size, setSize] = useState(0);
   // console.log("users state: ", setUsers(5));
 
@@ -33,7 +34,7 @@ export const SizeForm = (props) => {
           <input type="text" name="bots" placeholder="Number of Bots (Max: 9)" onChange={handleSize} className="display-input" />
         </label>
         <button type="submit" value="Submit" className="submit-btn">
-          Limit Bots Displayed
+          Limit Displayed
         </button>
       </form>
     </div>
