@@ -7,91 +7,42 @@ import { useContext } from "react";
 // export const CardBtn = () => {
 export const CardBtn = ({ user }) => {
   // console.log("cardbtn: ", user);
-  const { addHireToList } = useContext(HiredContext);
-  // const { hiredList, addHireToList } = useContext(HiredContext);
-  // const { first_name, last_name, id} = user;
+  const { addHireToList, removeHireFromList, hiredList } = useContext(HiredContext);
+
+  // console.log("CardBTN: hiredList: ", hiredList);
   const { first_name } = user;
 
   const [isClicked, setIsClicked] = useState(false);
 
-  const [isHired, setIsHired] = useState([]);
-  // Add Bot into our list of hired bots
-  // const addToHiredList = () => {
-  //   console.log("Bot Hired!");
-  // };
+  // const [isHired, setIsHired] = useState(false);
 
   // We want to pass the user information to our list
   const addNewHireToList = () => addHireToList(user);
+  const removeNewHireFromList = () => removeHireFromList(user.id);
 
   //Switch isClicked state to change button text on click
   const handleClick = () => {
-    // console.log("card-btn: BUTTON CLICKED!");
-    // console.log("Before: IsHired: ", isHired);
-    // const newVal = [...isHired, user];
+    //If EXISTS in list then remove him
+    // IF not clicked yet, add user to list
+    if (!isClicked) addNewHireToList(user);
+    //Already clicked, remove to undo
+    else removeNewHireFromList(hiredList, user.id);
+    // else removeNewHireFromList(hiredList, user);
 
-    // on click we want to add to our hiredList from context
-    // setIsHired(newVal);
-    // console.log("After: IsHired: ", isHired);
-
-    addNewHireToList(user);
-
-    // addNewHireToList( first_name );
-
-    // addHireToList(user);
-    // addHireToList(first_name);
-
-    // console.log("hiredList: ", hiredList);
-
-    // switches button text
     const click = !isClicked;
     setIsClicked(click);
 
-    // console.log("Before: IsHired: ", isHired);
-    // const newVal = [...isHired, user];
-    // setIsHired(newVal);
-    // console.log("After: IsHired: ", isHired);
+    // if (!isClicked) removeHireFromList(user.id);
+    //if clicked is TRUE, then go into hiredList and remove
   };
 
   return (
     <div className="card-btn-container">
       <button className="card-btn" onClick={handleClick}>
-        {isClicked ? "You're Hired!" : "I'm Available"}
+        {isClicked ? "Undo" : `Hire ${first_name}`}
       </button>
     </div>
   );
 };
 
 export default CardBtn;
-
-// export const CardBtn = () => {
-//   const [isClicked, setIsClicked] = useState(false)
-
-//   return (
-//     <div className="card-btn-container">
-//       <button className="card-btn">You're Hired!</button>
-//     </div>
-//   );
-// };
-
-//return if(isClicked === 'true') (
-//   <div className="card-btn-container">
-//   <button className="card-btn">You're Hired!</button>
-// </div> );
-
-/////////////////////
-// return;
-//   {
-//     isClicked ? (
-//       <div className="card-btn-container">
-//         <button className="card-btn" onClick={() => handleClick(isClicked)}>
-//           You're Hired!
-//         </button>
-//       </div>
-//     ) : (
-//       <div className="card-btn-container">
-//         <button className="card-btn" onClick={() => handleClick(isClicked)}>
-//           Hire Me
-//         </button>
-//       </div>
-//     );
-//   }

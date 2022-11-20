@@ -8,9 +8,6 @@ export const Sidebar = ({ users, setUsers }) => {
     <div className="sidebar-container">
       <FindBtn setUsers={setUsers} />
 
-      {/* <SizeForm users={users} /> */}
-      {/* <SizeForm setUsers={setUsers} /> */}
-
       {/* Display Container here with Avatar, Name, Title  */}
       <HiredList users={users} />
       {/* <HiredList /> */}
