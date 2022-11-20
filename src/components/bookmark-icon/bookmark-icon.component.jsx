@@ -13,7 +13,7 @@ export const BookmarkIcon = () => {
   return (
     <div className="bookmark-container">
       <div onClick={handleClick}>
-        <ion-icon className="bookmark-icon" name="bookmark-outline" size="large"></ion-icon>
+        <ion-icon className="bookmark-icon" name="bookmark-outline" size="large" color="light"></ion-icon>
       </div>
       <span className="bookmark-count">0</span>
     </div>
