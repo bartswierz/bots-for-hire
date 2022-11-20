@@ -17,6 +17,8 @@ const addHire = (hiredList, hireToAdd) => {
   console.log("OUTSIDE alreadyHired");
   //return new list with our CURRENT AND ADDITIONAL
   return [...hiredList, { ...hireToAdd }];
+  // return [...hiredList, { ...hireToAdd }];
+  // return [...hiredList, ...hireToAdd];
 };
 
 // Pass in the hire list AND user to remove based on ID
@@ -59,7 +61,11 @@ export const HiredProvider = ({ children }) => {
   const [hiredList, setHiredList] = useState([]);
 
   //useEffect setup hiredList Count, when we add a hire to the list we have to increment the counter
-  // useEffect(() => {}, [hiredList]);
+  useEffect(() => {
+    const newHireCount = hiredList.length;
+    console.log("in useEffect, hireCount: ", newHireCount);
+    setHiredCount(newHireCount);
+  }, [hiredList]);
 
   //Add hire to list, addHire is our helper function
   const addHireToList = (hireToAdd) => {
@@ -73,7 +79,7 @@ export const HiredProvider = ({ children }) => {
   };
 
   // Add additional functions to this to pass to children
-  const value = { hiredList, addHireToList, removeHireFromList };
+  const value = { hiredList, hiredCount, addHireToList, removeHireFromList };
 
   return <HiredContext.Provider value={value}>{children}</HiredContext.Provider>;
 };
