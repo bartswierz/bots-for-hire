@@ -12,7 +12,8 @@ export const Sidebar = ({ users, setUsers }) => {
       {/* <SizeForm setUsers={setUsers} /> */}
 
       {/* Display Container here with Avatar, Name, Title  */}
-      <HiredList users={users} />
+      {/* <HiredList users={users} /> */}
+      <HiredList />
     </div>
   );
 };

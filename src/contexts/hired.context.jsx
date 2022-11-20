@@ -5,7 +5,16 @@ import { createContext, useState, useEffect } from "react";
 const addHire = (hiredList, hireToAdd) => {
   console.log("INSIDE addHire, hireToAdd: ", hireToAdd);
   //add an IF EXISTING to prevent duplicate hires on btn click
+  const alreadyHired = hiredList.find((hire) => hire.id === hireToAdd.id);
+  console.log("ALREADY HIRED! ", hireToAdd.id);
 
+  //User already in our list, don't add
+  if (alreadyHired) {
+    console.log("inside IF(alreadyHired)");
+    return [...hiredList];
+  }
+
+  console.log("OUTSIDE alreadyHired");
   //return new list with our CURRENT AND ADDITIONAL
   return [...hiredList, { ...hireToAdd }];
 };
