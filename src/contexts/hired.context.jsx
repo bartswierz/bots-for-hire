@@ -15,7 +15,7 @@ const addHire = (hiredList, hireToAdd) => {
 
 // Values we are accessing
 export const HiredContext = createContext({
-  isHired: false,
+  // isHired: false,
   hiredList: [],
   hiredCount: 0,
   addHireToList: () => {},
@@ -38,7 +38,7 @@ export const HiredProvider = ({ children }) => {
   //useEffect setup hiredList Count, when we add a hire to the list we have to increment the counter
   // useEffect(() => {}, [hiredList]);
 
-  //Add hire to list
+  //Add hire to list, addHire is our helper function
   const addHireToList = (hireToAdd) => {
     // Pass our current list AND the new hire to create a new object
     setHiredList(addHire(hiredList, hireToAdd));
@@ -47,7 +47,7 @@ export const HiredProvider = ({ children }) => {
   const removeHireFromList = (hireToRemove) => {};
 
   // Add additional functions to this to pass to children
-  const value = { addHireToList, removeHireFromList };
+  const value = { hiredList, addHireToList, removeHireFromList };
 
   return <HiredContext.Provider value={value}>{children}</HiredContext.Provider>;
 };
