@@ -1,9 +1,39 @@
-.hired-text {
-  font-size: 16px;
-  text-align: center;
-}
+$primaryColor: rgb(242, 43, 3);
+$textColor: white;
 
-.hired-header {
-  font-size: 24px;
-  text-align: center;
+.hired-container {
+  .hired-header {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .hired-text {
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8%;
+    gap: 10px;
+
+    .hired-avatar {
+      width: 20px;
+      height: 20px;
+      background-color: #2362ee;
+      border-radius: 50%;
+      border: 2px solid white;
+      align-self: center;
+    }
+
+    .remove-btn {
+      width: 32px;
+      height: 32px;
+      padding-top: 3px;
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(169, 169, 169);
+      }
+    }
+  }
 }

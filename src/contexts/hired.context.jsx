@@ -20,7 +20,21 @@ const addHire = (hiredList, hireToAdd) => {
 };
 
 // Pass in the hire list AND user to remove based on ID
-// const removeHire = (hiredList, hireToRemove) => {};
+const removeHire = (hiredList, hireToRemove) => {
+  console.log("INSIDE removeHire, hireToRemove: ", hireToRemove);
+
+  const newHiredList = hiredList.filter((hire) => hire.id !== hireToRemove);
+
+  console.log("newHiredList: ", newHiredList);
+  // Return ONLY the users with ids that are NOT this passed hireToRemove
+  // return hiredList.filter((hire) => hire.id !== hireToRemove.id);
+  // return hiredList.filter(
+  //   (hire) =>
+  //     // console.log("hire.id: ", hire.id);
+  //     hire.id !== hireToRemove.id
+  // );
+  return newHiredList;
+};
 
 // Values we are accessing
 export const HiredContext = createContext({
@@ -53,7 +67,10 @@ export const HiredProvider = ({ children }) => {
     setHiredList(addHire(hiredList, hireToAdd));
   };
 
-  const removeHireFromList = (hireToRemove) => {};
+  //pass in the user id to remove
+  const removeHireFromList = (hireToRemove) => {
+    setHiredList(removeHire(hiredList, hireToRemove));
+  };
 
   // Add additional functions to this to pass to children
   const value = { hiredList, addHireToList, removeHireFromList };
