@@ -1,0 +1,25 @@
+.work-icon-container {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  // vertically centers icon
+  margin: auto 0;
+  width: 18%;
+}
+
+.work-icon {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
+
+.work-count {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  bottom: 16px;
+}

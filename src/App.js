@@ -1,14 +1,7 @@
 import "./App.scss";
 import { useState, useEffect } from "react";
-
-// import sphere from "./images/sphere.jpg";
-// import matrix from "./images/matrix-small.jpg";
-// import warpspeed from "./images/warpspeed-small.jpg";
-
 import CardList from "./components/card-list/card-list.component";
-// import SizeForm from "./size-form/size-form.component";
 import Sidebar from "./components/sidebar/sidebar.component";
-// import CardIcon from "./components/card-icon/card-icon.component";
 
 const App = () => {
   //Store user info from API - Moved to Sidebar

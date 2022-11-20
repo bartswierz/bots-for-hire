@@ -2,7 +2,8 @@ import "./hired-list.styles.scss";
 import { HiredContext } from "../../contexts/hired.context";
 import { useContext } from "react";
 
-export const HiredList = ({ user }) => {
+// export const HiredList = ({ user }) => {
+export const HiredList = () => {
   // Hired List holds our current list
   const { hiredList, hiredCount, removeHireFromList } = useContext(HiredContext);
 
