@@ -23,15 +23,6 @@ export const CardBtn = ({ user }) => {
   //Switch isClicked state to change button text on click
   const handleClick = () => {
     // IF not clicked yet, add user to list
-    // if (!isClicked) addNewHireToList(user);
-    // //Already clicked, remove to undo
-    // else removeNewHireFromList(hiredList, user.id);
-    // // else removeNewHireFromList(hiredList, user);
-
-    // const click = !isClicked;
-    // setIsClicked(click);
-
-    // IF not clicked yet, add user to list
     if (!isClicked) {
       addNewHireToList(user);
       // const click = !isClicked;

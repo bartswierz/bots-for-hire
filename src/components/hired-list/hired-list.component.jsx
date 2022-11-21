@@ -9,7 +9,7 @@ export const HiredList = () => {
 
   return (
     <div className="hired-container">
-      <h1 className="hired-header">Current Hires</h1>
+      <h1 className="hired-header">{hiredCount > 0 ? "Current Hires" : "No Hires"}</h1>
       {/* <h1 className="hired-header">{hiredCount === 0 ? "No Hires Yet" : `Number of Hires: ${hiredCount}`}</h1> */}
       {/* Deconstructing user for readability */}
       <div>

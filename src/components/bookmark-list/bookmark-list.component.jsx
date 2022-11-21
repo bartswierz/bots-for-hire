@@ -12,16 +12,17 @@ export const BookmarkList = () => {
 
   // Passing in user info as object, user = id, first_name, last_name, avatar
   const hireBookmarkHandler = (user) => {
-    //add to hirelist
+    //Add bookmarked user to Hire List
     addHireToList(user);
-    //remove from bookmark list
+
+    //Remove from Bookmark List
     removeFromBookmarkList(user.id);
   };
 
   return (
     <div className="bookmark-container">
-      <h1 className="bookmark-header">Current Bookmarks</h1>
-      {/* <h1 className="hired-header">{hiredCount === 0 ? "No Hires Yet" : `Number of Hires: ${hiredCount}`}</h1> */}
+      {/* <h1 className="bookmark-header">Current Bookmarks</h1> */}
+      <h1 className="bookmark-header">{bookmarkCount > 0 ? "Current Bookmarks" : "No Bookmarks"}</h1>
       {/* Deconstructing user for readability */}
       <div>
         {bookmarkList.map(({ id, first_name, last_name, avatar }) => {
@@ -31,7 +32,6 @@ export const BookmarkList = () => {
                 {first_name} {last_name} <img src={avatar} className="bookmark-avatar" alt="Employee"></img>
                 {/* Add a Checkmark to ADD to HIRE LIST */}
                 <div>
-                  {/* TODO: onClick, add to hired list AND remove from bookmark list */}
                   <ion-icon
                     onClick={() => hireBookmarkHandler({ id, first_name, last_name, avatar })}
                     name="checkmark-sharp"
