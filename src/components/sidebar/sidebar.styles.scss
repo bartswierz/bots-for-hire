@@ -1,6 +1,7 @@
 /* The sidebar menu */
 .sidebar-container {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
+  min-height: 70vh; /* Full-height: remove this if you want "auto" height */
+  max-height: 90vh;
   // width: 22vw; /* Set the width of the sidebar */
   min-width: 400px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -14,6 +15,7 @@
   border-bottom-right-radius: 45px;
   border-top-right-radius: 30px;
   padding-top: 20px;
+  padding-bottom: 50px;
 
   .hired-container {
     color: white;

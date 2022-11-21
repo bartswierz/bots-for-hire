@@ -5,10 +5,10 @@ import { BookmarkContext } from "../../contexts/bookmark.context";
 export const CardIcon = ({ user }) => {
   const [isSaveClicked, setIsSaveClicked] = useState(false);
 
-  const { bookmarkList, bookmarkCount, addBookmarkToList } = useContext(BookmarkContext);
+  const { bookmarkList, bookmarkCount, addBookmarkToList, removeFromBookmarkList } = useContext(BookmarkContext);
   //addBookmark
   const addNewBookmarkToList = () => addBookmarkToList(user);
-  //removeBoomark similar to card-btn
+  const removeNewBookmarkFromList = () => removeFromBookmarkList(user.id);
 
   // We want to pass the user information to our list
   // const addNewHireToList = () => addHireToList(user);
@@ -29,7 +29,7 @@ export const CardIcon = ({ user }) => {
     }
     //Already clicked, remove to undo
     else {
-      // removeNewBookmarkFromList(hiredList, user.id);
+      removeNewBookmarkFromList(bookmarkList, user.id);
       const click = !isSaveClicked;
       setIsSaveClicked(click);
     }

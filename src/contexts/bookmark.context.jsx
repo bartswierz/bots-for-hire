@@ -13,6 +13,11 @@ const addBookmark = (bookmarkList, bookmarkToAdd) => {
   return [...bookmarkList, { ...bookmarkToAdd }];
 };
 //Helper function for adding bookmark
+const removeBookmark = (bookmarkList, bookmarkToRemove) => {
+  const newBookmarkList = bookmarkList.filter((bookmark) => bookmark.id !== bookmarkToRemove);
+
+  return newBookmarkList;
+};
 
 //helper function for remove bookmark
 
@@ -41,9 +46,12 @@ export const BookmarkProvider = ({ children }) => {
   };
 
   //remove bookmark from list
+  const removeFromBookmarkList = (bookmarkToRemove) => {
+    setBookmarkList(removeBookmark(bookmarkList, bookmarkToRemove));
+  };
 
   //Functions we will pass to children
-  const value = { bookmarkList, bookmarkCount, addBookmarkToList };
+  const value = { bookmarkList, bookmarkCount, addBookmarkToList, removeFromBookmarkList };
 
   return <BookmarkContext.Provider value={value}>{children}</BookmarkContext.Provider>;
 };

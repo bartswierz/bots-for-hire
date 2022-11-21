@@ -5,22 +5,7 @@ import { useState, useContext } from "react";
 // import { BookmarkContext } from "../../contexts/bookmark.context";
 
 export const Card = ({ user }) => {
-  // const [isHired, setIsHired] = useState([]);
-  // console.log("in card: ", user.id);
-  // const { bookmarkList, bookmarkCount } = useContext(BookmarkContext);
-  // console.log("Card: BookmarkList: ", bookmarkList);
-  // console.log("Card: bookmarkCount: ", bookmarkCount);
-
   const { id, avatar, first_name, last_name, employment, email, phone_number, address } = user;
-
-  // const [isHired, setIsHired] = useState([]);
-  // Add Bot into our list of hired bots
-  // const addToHiredList = () => {
-  //   console.log("Bot Hired!");
-  // };
-
-  //Will add bookmark to list AND update icon similar to hiredList
-  // const bookmarkHandler = () => {};
 
   return (
     <div className="card-container" key={id}>

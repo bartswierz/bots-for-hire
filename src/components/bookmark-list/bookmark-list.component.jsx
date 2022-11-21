@@ -6,7 +6,7 @@ import { useContext } from "react";
 export const BookmarkList = () => {
   // Hired List holds our current list
   // const { hiredList, hiredCount, removeHireFromList } = useContext(HiredContext);
-  const { bookmarkList, bookmarkCount, removeBookmarkList } = useContext(BookmarkContext);
+  const { bookmarkList, bookmarkCount, removeFromBookmarkList } = useContext(BookmarkContext);
 
   return (
     <div className="bookmark-container">
@@ -21,8 +21,8 @@ export const BookmarkList = () => {
                 {first_name} {last_name} <img src={avatar} className="bookmark-avatar" alt="Employee"></img>
                 {/* Add a Checkmark to ADD to HIRE LIST */}
                 <div className="remove-btn">
-                  <ion-icon name="trash-outline"></ion-icon>
-                  {/* <ion-icon onClick={() => removeBookmarkFromList(id)} name="trash-outline"></ion-icon> */}
+                  {/* <ion-icon name="trash-outline"></ion-icon> */}
+                  <ion-icon onClick={() => removeFromBookmarkList(id)} name="trash-outline"></ion-icon>
                 </div>
               </div>
             </div>

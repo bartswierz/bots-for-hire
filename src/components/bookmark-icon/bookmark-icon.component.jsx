@@ -1,21 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { BookmarkContext } from "../../contexts/bookmark.context";
 import "./bookmark-icon.styles.scss";
 
 export const BookmarkIcon = () => {
-  // Will display bookmarkCount in future
-  // return <button>0</button>;
-
-  // const [isSaveClicked, setIsSaveClicked] = useState(false);
-
-  //On click render bookmarkList / remove hiredList
-  const handleClick = () => {};
+  const { bookmarkCount } = useContext(BookmarkContext);
 
   return (
     <div className="bookmark-icon-container">
-      <div onClick={handleClick}>
+      <div>
         <ion-icon className="bookmark-icon" name="bookmark-outline" size="large" color="light"></ion-icon>
       </div>
-      <span className="bookmark-icon-count">0</span>
+      <span className="bookmark-icon-count">{bookmarkCount}</span>
     </div>
   );
 };
