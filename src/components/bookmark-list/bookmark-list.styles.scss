@@ -1,0 +1,41 @@
+$primaryColor: rgb(242, 43, 3);
+$textColor: white;
+
+.bookmark-container {
+  .bookmark-header {
+    font-size: 24px;
+    text-align: center;
+    color: $textColor;
+  }
+
+  .bookmark-text {
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 16%;
+    gap: 10px;
+    color: $textColor;
+
+    .bookmark-avatar {
+      width: 20px;
+      height: 20px;
+      background-color: #2362ee;
+      border-radius: 50%;
+      border: 2px solid white;
+      align-self: center;
+    }
+
+    .remove-btn {
+      width: 32px;
+      height: 32px;
+      padding-top: 3px;
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(169, 169, 169);
+      }
+    }
+  }
+}

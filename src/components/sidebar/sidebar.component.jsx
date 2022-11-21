@@ -1,6 +1,7 @@
 // import SizeForm from "../../size-form/size-form.component";
 import FindBtn from "../buttons/find-btn/find-btn.component";
 import HiredList from "../hired-list/hired-list.component";
+import BookmarkList from "../bookmark-list/bookmark-list.component";
 import BookmarkIcon from "../bookmark-icon/bookmark-icon.component";
 import WorkIcon from "../work-icon/work-icon.component";
 
@@ -18,6 +19,7 @@ export const Sidebar = ({ users, setUsers }) => {
       </div>
 
       <HiredList />
+      <BookmarkList />
     </div>
   );
 };

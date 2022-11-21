@@ -1,5 +1,4 @@
-.bookmark-container {
-  width: 45px;
+.bookmark-icon-container {
   height: 45px;
   position: relative;
   display: flex;
@@ -16,7 +15,7 @@
   height: 24px;
 }
 
-.bookmark-count {
+.bookmark-icon-count {
   position: absolute;
   font-size: 12px;
   font-weight: bold;

@@ -46,7 +46,7 @@ export const HiredProvider = ({ children }) => {
   //useEffect will increment/decrement our counter depending if user adds/removes hire to our hiredList
   useEffect(() => {
     const newHireCount = hiredList.length;
-    console.log("in useEffect, hireCount: ", newHireCount);
+    console.log("Hired useEffect, hireCount: ", newHireCount);
     setHiredCount(newHireCount);
   }, [hiredList]);
 

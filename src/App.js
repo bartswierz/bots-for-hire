@@ -9,21 +9,14 @@ const App = () => {
 
   // Run effect, will run once to fetch and populate our cards
   useEffect(() => {
-    console.log("INSIDE useEffect");
+    // console.log("INSIDE useEffect");
     fetch("https://random-data-api.com/api/users/random_user?size=9")
       .then((response) => response.json())
       .then((userInfo) => {
         setUsers(userInfo);
-        console.log("userInfo: ", userInfo);
+        // console.log("userInfo: ", userInfo);
       });
   }, []);
-
-  // Fetch 10 New users to be rendered - Moved to SideBar Component
-  // const handleClick = () => {
-  //   fetch("https://random-data-api.com/api/users/random_user?size=9")
-  //     .then((response) => response.json())
-  //     .then((data) => setUsers(data));
-  // };
 
   return (
     // <div className="App">

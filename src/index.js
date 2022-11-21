@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HiredProvider } from "./contexts/hired.context";
+import { BookmarkProvider } from "./contexts/bookmark.context";
 // import { ThemeProvider } from "./contexts/theme.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -11,7 +12,9 @@ root.render(
   <React.StrictMode>
     {/* <ThemeProvider> */}
     <HiredProvider>
-      <App />
+      <BookmarkProvider>
+        <App />
+      </BookmarkProvider>
     </HiredProvider>
     {/* </ThemeProvider> */}
   </React.StrictMode>
