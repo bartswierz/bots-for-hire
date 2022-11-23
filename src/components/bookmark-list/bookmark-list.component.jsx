@@ -31,7 +31,7 @@ export const BookmarkList = () => {
               <div className="bookmark-text">
                 {first_name} {last_name} <img src={avatar} className="bookmark-avatar" alt="Employee"></img>
                 {/* Add a Checkmark to ADD to HIRE LIST */}
-                <div>
+                <div className="bookmarkCheckmark">
                   <ion-icon
                     onClick={() => hireBookmarkHandler({ id, first_name, last_name, avatar })}
                     name="checkmark-sharp"

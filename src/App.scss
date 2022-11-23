@@ -13,16 +13,13 @@
   grid-template-columns: 3fr 7fr;
 
   background-image: url("./images/sphere.jpg");
-  background-size: 100%;
-  // background-size: cover;
-  background-position: center;
+  background-size: 100vw;
+  background-size: cover;
+  // background-position: center;
   background-attachment: fixed;
 }
 
 .theme {
-  // background-image: url("./images/sphere.jpg");
-  /* background-image: url("./images/matrix.jpg"); */
-  /* background-image: url("./images/warpspeed.jpg"); */
   // background-size: 100%;
   // background-position: center;
   // background-attachment: fixed;
