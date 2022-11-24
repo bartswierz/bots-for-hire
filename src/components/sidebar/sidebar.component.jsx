@@ -13,9 +13,9 @@ export const Sidebar = ({ users, setUsers }) => {
   return (
     <div className="sidebar-container">
       <div className="flex">
-        <WorkIcon />
-        <FindBtn setUsers={setUsers} />
         <BookmarkIcon />
+        <FindBtn setUsers={setUsers} />
+        <WorkIcon />
       </div>
 
       <HiredList />

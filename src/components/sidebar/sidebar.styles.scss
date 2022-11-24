@@ -17,6 +17,9 @@
   padding-top: 20px;
   padding-bottom: 50px;
 
+  // Move scroll bar to the left-hand side of sidebar
+  direction: rtl;
+
   .hired-container {
     color: white;
   }

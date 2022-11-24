@@ -17,10 +17,10 @@ export const HiredList = () => {
           return (
             <div key={id}>
               <div className="hired-text">
-                {first_name} {last_name} <img src={avatar} className="hired-avatar" alt="Employee"></img>
                 <div className="remove-btn">
                   <ion-icon onClick={() => removeHireFromList(id)} name="trash-outline"></ion-icon>
                 </div>
+                <img src={avatar} className="hired-avatar" alt="Employee"></img> {first_name} {last_name}
               </div>
             </div>
           );

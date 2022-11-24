@@ -6,15 +6,17 @@ $textColor: white;
     font-size: 24px;
     text-align: center;
     color: $textColor;
+    margin-bottom: 10px;
   }
 
   .bookmark-text {
     font-size: 24px;
     text-align: center;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 16%;
-    gap: 10px;
+    justify-content: flex-start;
+    padding-right: 8%;
+    column-gap: 10px;
+    margin-bottom: 5px;
     color: $textColor;
 
     .bookmark-avatar {
@@ -26,7 +28,8 @@ $textColor: white;
       align-self: center;
     }
 
-    .remove-btn {
+    .remove-btn,
+    .bookmarkCheckmark {
       width: 32px;
       height: 32px;
       padding-top: 3px;

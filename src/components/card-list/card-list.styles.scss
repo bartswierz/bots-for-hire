@@ -18,3 +18,60 @@ body {
   min-height: 800px;
   justify-items: center;
 }
+
+//Add media queries for 1, 2, 3 column grid layout
+//576 - phones - 1 card - Landscape width
+//768 - tablets - 2 cards
+//992 - laptops - 2 cards
+//1200 - large devices - 3 cards
+@media (max-width: 575.98px) {
+  .cards-container {
+    // grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .cards-container {
+    // grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+// Small devices (landscape phones, less than 768px)
+// @media (max-width: 767.98px) {
+// }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 0;
+  }
+
+  .theme {
+    width: 100vw;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 1400.98px) {
+  .theme {
+    width: 95vw;
+  }
+
+  .card-container {
+    max-width: 310px;
+  }
+}

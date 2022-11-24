@@ -5,15 +5,17 @@ $textColor: white;
   .hired-header {
     font-size: 24px;
     text-align: center;
+    margin-bottom: 10px;
   }
 
   .hired-text {
     font-size: 24px;
     text-align: center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-right: 16%;
-    gap: 10px;
+    column-gap: 10px;
+    margin-bottom: 5px;
 
     .hired-avatar {
       width: 20px;

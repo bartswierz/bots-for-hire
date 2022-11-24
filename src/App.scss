@@ -7,22 +7,24 @@
 //   background-size: cover;
 //   background-attachment: fixed;
 // }
+* {
+  padding: 0;
+  margin: 0;
+  // background: red;
+}
 
 .app {
   display: grid;
   grid-template-columns: 3fr 7fr;
 
   background-image: url("./images/sphere.jpg");
-  background-size: 100%;
-  // background-size: cover;
-  background-position: center;
+  background-size: 100vw;
+  background-size: cover;
+  // background-position: center;
   background-attachment: fixed;
 }
 
 .theme {
-  // background-image: url("./images/sphere.jpg");
-  /* background-image: url("./images/matrix.jpg"); */
-  /* background-image: url("./images/warpspeed.jpg"); */
   // background-size: 100%;
   // background-position: center;
   // background-attachment: fixed;
@@ -30,7 +32,8 @@
 
   // PUSH theme to the right, px == sidebar width
   // margin-left: 30%;
-  margin-left: 30vw;
+  // margin-left: 30vw;
+  width: 100vw;
 }
 
 .company-header {
@@ -38,12 +41,13 @@
   font-family: "Audiowide", cursive;
   /* font-family: "Baumans", cursive; */
   text-align: center;
-  // color: rgb(35 98 238);
   background-color: #2a2a2a;
-  // width: 40%;
   margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 40px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  width: 100%;
 
   // Gives our header a 4-color linear gradient
   background: linear-gradient(to right, rgb(44, 54, 241) 15%, rgb(109, 41, 244) 48%, rgb(205, 67, 67) 55%);

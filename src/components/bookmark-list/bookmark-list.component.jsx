@@ -29,18 +29,18 @@ export const BookmarkList = () => {
           return (
             <div key={id}>
               <div className="bookmark-text">
-                {first_name} {last_name} <img src={avatar} className="bookmark-avatar" alt="Employee"></img>
-                {/* Add a Checkmark to ADD to HIRE LIST */}
-                <div>
+                <div className="remove-btn">
+                  <ion-icon onClick={() => removeFromBookmarkList(id)} name="trash-outline"></ion-icon>
+                </div>
+                <div className="bookmarkCheckmark">
                   <ion-icon
                     onClick={() => hireBookmarkHandler({ id, first_name, last_name, avatar })}
                     name="checkmark-sharp"
                     color="light"
                   ></ion-icon>
                 </div>
-                <div className="remove-btn">
-                  <ion-icon onClick={() => removeFromBookmarkList(id)} name="trash-outline"></ion-icon>
-                </div>
+                <img src={avatar} className="bookmark-avatar" alt="Employee"></img> {first_name} {last_name}
+                {/* Add a Checkmark to ADD to HIRE LIST */}
               </div>
             </div>
           );
