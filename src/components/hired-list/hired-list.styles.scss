@@ -39,3 +39,15 @@ $textColor: white;
     }
   }
 }
+
+@media (max-width: 568px) {
+  .hired-container {
+    .hired-text {
+      font-size: 24px;
+      justify-content: center;
+      padding-right: 0;
+      // justify-content: space-around;
+      // margin: 0 auto;
+    }
+  }
+}

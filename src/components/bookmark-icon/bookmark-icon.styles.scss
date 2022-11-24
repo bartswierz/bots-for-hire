@@ -6,26 +6,37 @@
   justify-content: center;
   cursor: pointer;
   // vertically centers icon
-  margin: auto 0;
-  width: 18%;
+  margin: auto 15px;
+  width: 50px;
+
+  background-color: rgb(35 98 238);
+  border-radius: 50%;
+
+  border: 2px solid rgb(35 98 238);
+  color: white;
+  background-color: rgb(35 98 238);
+  box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0.4);
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(31, 89, 213);
+    border: 2px solid rgb(31, 89, 213);
+    transition: 200ms ease-in-out;
+    box-shadow: 5px 5px 10px 2px rgb(0, 0, 0, 0);
+  }
 
   .bookmark-icon-count {
     position: absolute;
     font-size: 12px;
     font-weight: bold;
-    bottom: 18px;
+    bottom: 16px;
     color: white;
   }
 
   .icon-container {
-    border-radius: 50%;
+    // border-radius: 50%;
     padding: 5px;
     padding: 5px 5px 0px 5px;
-
-    &:hover {
-      cursor: pointer;
-      background-color: rgb(161, 161, 161);
-    }
 
     ion-icon {
       width: 36px;

@@ -26,5 +26,9 @@
     justify-content: center;
   }
 }
-
+@media (max-width: 568px) {
+  .sidebar-container {
+    min-width: 100vw;
+  }
+}
 // HIRED LIST - WILL MOVE TO COMPONENT AFTER
