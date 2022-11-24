@@ -25,13 +25,16 @@ const removeBookmark = (bookmarkList, bookmarkToRemove) => {
 export const BookmarkContext = createContext({
   bookmarkList: [],
   bookmarkCount: 0,
+  isBookmarkOpen: false,
   addBookmarkToList: () => {},
   removeFromBookmarkList: () => {},
+  toggleBookmarkList: () => {},
 });
 
 export const BookmarkProvider = ({ children }) => {
   const [bookmarkCount, setBookmarkCount] = useState(0);
   const [bookmarkList, setBookmarkList] = useState([]);
+  const [isBookmarkOpen, setIsBookmarkOpen] = useState(false);
 
   //Update bookmark count for Icon, runs each time we add/remove hire
   useEffect(() => {
@@ -50,8 +53,13 @@ export const BookmarkProvider = ({ children }) => {
     setBookmarkList(removeBookmark(bookmarkList, bookmarkToRemove));
   };
 
+  // If open, return false to hide bookmark list
+  const toggleBookmarkList = () => {
+    isBookmarkOpen ? setIsBookmarkOpen(false) : setIsBookmarkOpen(true);
+  };
+
   //Functions we will pass to children
-  const value = { bookmarkList, bookmarkCount, addBookmarkToList, removeFromBookmarkList };
+  const value = { bookmarkList, bookmarkCount, isBookmarkOpen, toggleBookmarkList, addBookmarkToList, removeFromBookmarkList };
 
   return <BookmarkContext.Provider value={value}>{children}</BookmarkContext.Provider>;
 };

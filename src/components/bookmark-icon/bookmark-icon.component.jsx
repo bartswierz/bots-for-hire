@@ -1,13 +1,19 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { BookmarkContext } from "../../contexts/bookmark.context";
 import "./bookmark-icon.styles.scss";
 
 export const BookmarkIcon = () => {
-  const { bookmarkCount } = useContext(BookmarkContext);
+  const { bookmarkCount, toggleBookmarkList } = useContext(BookmarkContext);
+
+  //Click on Bookmark icon displays/hides bookmark list in sidebar
+  const handleBookmark = () => {
+    toggleBookmarkList();
+  };
 
   return (
-    <div className="bookmark-icon-container">
-      <div>
+    <div className="bookmark-icon-container" onClick={handleBookmark}>
+      {/* <div className="bookmark-icon-container"> */}
+      <div className="icon-container">
         <ion-icon className="bookmark-icon" name="bookmark-outline" size="large" color="light"></ion-icon>
       </div>
       <span className="bookmark-icon-count">{bookmarkCount}</span>

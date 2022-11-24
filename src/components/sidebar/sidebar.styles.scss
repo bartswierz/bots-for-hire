@@ -1,21 +1,18 @@
 /* The sidebar menu */
 .sidebar-container {
-  min-height: 70vh; /* Full-height: remove this if you want "auto" height */
+  min-height: 10vh; /* Full-height: remove this if you want "auto" height */
   max-height: 90vh;
   // width: 22vw; /* Set the width of the sidebar */
   min-width: 400px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top - Prevents card avatar from displaying through sidebar */
-  // top: 0; /* Stay at the top */
-  // left: 0;
-  // background-color: #404040; /* Black */
   background-color: rgb(64, 64, 64, 0.6); /* Black */
   border-right: 2px solid rgb(122, 122, 122);
   overflow-x: hidden; /* Disable horizontal scroll */
   border-bottom-right-radius: 45px;
   border-top-right-radius: 30px;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   // Move scroll bar to the left-hand side of sidebar
   direction: rtl;

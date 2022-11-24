@@ -1,8 +1,6 @@
 import "./card.styles.scss";
 import CardBtn from "../buttons/card-btn/card-btn.component";
 import CardIcon from "../card-icon/card-icon.component";
-import { useState, useContext } from "react";
-// import { BookmarkContext } from "../../contexts/bookmark.context";
 
 export const Card = ({ user }) => {
   const { id, avatar, first_name, last_name, employment, email, phone_number, address } = user;
@@ -13,7 +11,9 @@ export const Card = ({ user }) => {
         <img className="avatar" src={avatar} alt="Robot"></img>
       </div>
       <div className="text-container">
-        <CardIcon user={user} />
+        <div className="card-icon-container">
+          <CardIcon user={user} />
+        </div>
         <p className="card-name">{`${first_name} ${last_name}`}</p>
         <p className="card-title">{employment.title}</p>
         <p className="card-description">

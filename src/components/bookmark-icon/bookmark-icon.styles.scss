@@ -8,17 +8,28 @@
   // vertically centers icon
   margin: auto 0;
   width: 18%;
-}
 
-.bookmark-icon {
-  width: 24px;
-  height: 24px;
-}
+  .bookmark-icon-count {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    bottom: 18px;
+    color: white;
+  }
 
-.bookmark-icon-count {
-  position: absolute;
-  font-size: 12px;
-  font-weight: bold;
-  bottom: 20px;
-  color: white;
+  .icon-container {
+    border-radius: 50%;
+    padding: 5px;
+    padding: 5px 5px 0px 5px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(161, 161, 161);
+    }
+
+    ion-icon {
+      width: 36px;
+      height: 36px;
+    }
+  }
 }

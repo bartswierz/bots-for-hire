@@ -31,8 +31,10 @@ export const HiredContext = createContext({
   // isHired: false,
   hiredList: [],
   hiredCount: 0,
+  isHireOpen: false,
   addHireToList: () => {},
   removeHireFromList: () => {},
+  toggleHireList: () => {},
 });
 
 export const HiredProvider = ({ children }) => {
@@ -42,6 +44,7 @@ export const HiredProvider = ({ children }) => {
   const [hiredCount, setHiredCount] = useState(0);
   // Holds our hires
   const [hiredList, setHiredList] = useState([]);
+  const [isHireOpen, setIsHireOpen] = useState(false);
 
   //useEffect will increment/decrement our counter depending if user adds/removes hire to our hiredList
   useEffect(() => {
@@ -61,8 +64,13 @@ export const HiredProvider = ({ children }) => {
     setHiredList(removeHire(hiredList, hireToRemove));
   };
 
+  // If open, return false to hide hire list
+  const toggleHireList = () => {
+    isHireOpen ? setIsHireOpen(false) : setIsHireOpen(true);
+  };
+
   // Add additional functions to this to pass to children
-  const value = { hiredList, hiredCount, addHireToList, removeHireFromList };
+  const value = { hiredList, hiredCount, isHireOpen, toggleHireList, addHireToList, removeHireFromList };
 
   return <HiredContext.Provider value={value}>{children}</HiredContext.Provider>;
 };
